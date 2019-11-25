@@ -10,7 +10,9 @@ square::square() {
 
 square::square(double side, std::string name) {
     m_dSide = side;
-    m_sName = name;
+    std::cout << "before " << &m_sName ;
+    m_sName = "" + name;
+    std::cout << " after " << &m_sName << std::endl;
     m_dArea = m_dSide * m_dSide;
 }
 
