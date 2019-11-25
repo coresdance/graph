@@ -21,7 +21,7 @@ public:
 
     //other
     virtual void prtGraph();
-    const double PI = 3.141592653589793238463;
+    const static double PI = 3.141592653589793238463;
 
 protected:
     double m_dLength;
