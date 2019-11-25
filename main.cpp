@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <typeinfo>
 #include "square.h"
 #include "circle.h" 
 
@@ -20,7 +21,7 @@ int main() {
         }
 
     for (auto it : g)
-        if (typeid(it) == typeid(git_test::circle)) {
+        if (typeid(*it) == typeid(git_test::circle)) {
             it->prtGraph();
         } else if (typeid(it) == typeid(git_test::square)) {
             it->prtGraph();

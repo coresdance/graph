@@ -4,6 +4,8 @@
 
 namespace git_test {
 
+const double circle::PI = 3.141592653589793238463;
+
 circle::circle() {
     circle(10, "Alice");
 }
