@@ -1,7 +1,6 @@
 #include "square.h"
 #include <iostream>
 
-
 namespace git_test {
 
 square::square() {
@@ -10,9 +9,9 @@ square::square() {
 
 square::square(double side, std::string name) {
     m_dSide = side;
-    std::cout << "before " << &m_sName ;
-    m_sName = "" + name;
-    std::cout << " after " << &m_sName << std::endl;
+    //std::cout << &m_sName << std::endl;
+    m_sName = name;
+    //std::cout << m_sName << ' ' << &m_sName << ' ' << name << ' ' << &name << std::endl;
     m_dArea = m_dSide * m_dSide;
 }
 

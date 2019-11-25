@@ -11,7 +11,9 @@ circle::circle() {
 }
 
 circle::circle(double length, std::string name) {
-    m_sName = "" + name;
+    //std::cout << &m_sName << std::endl;
+    m_sName = name;    
+    //std::cout << m_sName << ' ' << &m_sName << ' ' << name << ' ' << &name << std::endl;
     m_dLength = length;
     m_dArea = PI * length * length;
 }

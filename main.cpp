@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <typeinfo>
+#include <string>
 #include "square.h"
 #include "circle.h" 
 
@@ -10,13 +11,15 @@ int main() {
     for (int i = 0 ; i < 5; ++i)
         if (i & 1) 
         {
+            std::string name = "Circle_" + std::to_string(i);
             g.push_back((git_test::graph *)
-                (new git_test::circle(i, "Circle_" + i))
+                (new git_test::circle(i, name))
             );
         } else 
         {
-            g.push_back((git_test::graph *) 
-                (new git_test::square(i, "Square_" + i))
+            std::string name = "Square_" + std::to_string(i);
+            g.push_back((git_test::graph *)
+                (new git_test::square(i, name))
             );
         }
 
@@ -29,5 +32,6 @@ int main() {
             //异常
             std::cout << "异常" << std::endl;
         }
+    
     return 0;
 }
